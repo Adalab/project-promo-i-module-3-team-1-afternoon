@@ -1,0 +1,24 @@
+.profilePage{
+    height: 100vh;
+    width: 100vw;
+    .allPageHeader{
+        height: 110px;
+        width: 100vw;
+        background-color: #FFFFFF;
+    }
+    .profilePageBody{
+        height: calc(100vh - 170px);
+        width: 100vw;
+        background-color: #F5F5F5;
+        .cardPreview{
+            background: darkgray;
+            width: 50%;
+            height: 100%;
+        }
+    }
+    .allPageFooter{
+        height: 60px;
+        width: 100vw;
+        background-color: #FFFFFF;
+    }
+}
