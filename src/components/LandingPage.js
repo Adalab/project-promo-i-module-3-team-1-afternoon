@@ -9,7 +9,6 @@ class LandingPage extends React.Component {
       super(props);
     }
     render() {
-        console.log('props', this.props);
           return (
               <div id="landingPage" className="landingPage">
                   <LandingPageBody></LandingPageBody>

@@ -10,7 +10,6 @@ class ProfilePage extends React.Component {
       super(props);
     }
     render() {
-        console.log('props', this.props);
           return (
               <div id="profilePage" className="profilePage">
                   <AllPageHeader></AllPageHeader>

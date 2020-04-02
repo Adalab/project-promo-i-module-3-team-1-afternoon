@@ -6,7 +6,7 @@ class CardPreview extends React.Component {
     }
     render() {
           return (
-              <div id="cardPreview" className="cardPreview">
+              <div id="cardPreview" className="cardPreview grid-2">
               </div>
           );
     }
