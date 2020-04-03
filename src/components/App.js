@@ -1,6 +1,7 @@
 import React from 'react';
 import '../stylesheets/App.scss';
-import Collapsables from './Collapsables';
+import ProfilePage from './ProfilePage';
+import LandingPage from './LandingPage';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,7 +11,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Collapsables />
+        <LandingPage></LandingPage>
+        <ProfilePage></ProfilePage>
       </div>
     );
   }
