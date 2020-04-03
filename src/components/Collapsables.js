@@ -1,6 +1,6 @@
 import React from 'react';
 import '../stylesheets/Collapsables.scss';
-
+import '../stylesheets/ProfilePage.scss';
 
 // const Collapsables = props =>{
 

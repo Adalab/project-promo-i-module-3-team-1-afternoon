@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/Design.scss';
 
 class Design extends React.Component {
     constructor(props) {
@@ -7,20 +8,14 @@ class Design extends React.Component {
     render() {
         return (
 
-            <div>
-
-            
-            <p>Colores</p>
+            <div clasName="form__open">
+            <h3 className="form__title">colores</h3>
 
             </div>
 
         );
     }
 }
-
-
-
-
 
 
 
