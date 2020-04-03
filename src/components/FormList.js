@@ -11,7 +11,12 @@ class FormList extends React.Component {
           return (
               <div className="grid-1">
                 <ul id="formList" className="formList">
-                    <Collapsables></Collapsables>
+                    <Collapsables name="diseña">
+                    </Collapsables>
+                    <Collapsables>
+                    </Collapsables>
+                    <Collapsables name="comparte">
+                    </Collapsables>
                 </ul>
               </div>
           );
