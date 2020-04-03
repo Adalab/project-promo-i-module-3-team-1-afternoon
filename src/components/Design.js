@@ -1,24 +1,22 @@
 import React from 'react';
 
-const Design = () => {
+class Design extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
 
+            <div>
 
-    return(
+            
+            <p>Colores</p>
 
-        <p>colores</p>
+            </div>
 
-
-
-
-    );
+        );
+    }
 }
-
-
-
-
-
-
-
 
 
 
