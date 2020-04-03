@@ -1,5 +1,5 @@
-@import './core/variables';
 @import './base/reset.scss';
+@import './core/variables';
 @import './core/mixins';
 
 .palettesContainer {
@@ -7,6 +7,7 @@
     grid-template-columns: 1fr 1fr;
 
     & h3 {
+        
         text-transform: uppercase;
         color: $primaryColor;
         padding: 0;
@@ -15,8 +16,8 @@
         font-size: 0.875rem;
         grid-column: 1/2;
         font-family: $mainText;
-        font-weight: 600;
-        font-weight:lighter;
+        font-style: inherit;
+       
 
         @media all and (min-width: $tablet) {
             padding-left: 0;
