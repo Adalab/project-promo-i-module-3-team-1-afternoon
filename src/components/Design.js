@@ -8,6 +8,7 @@ class Design extends React.Component {
     render() {
         return (
 
+            <div className="form__open"id="form__design--open">
             <div className="palettesContainer">
                     
             <h3>colores</h3>
@@ -48,6 +49,7 @@ class Design extends React.Component {
             </div>
         </div>
     
+    </div>
 
         );
     }
