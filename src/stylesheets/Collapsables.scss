@@ -1,4 +1,7 @@
+
 @import 'core/variables';
+
+
 .form__closed {
     display: flex;
     flex-direction: row;
@@ -20,7 +23,6 @@
         margin-right: 10px;
        
     }
-
     .form__arrow--design, .form__arrow--fill, .form__arrow--share {
         color: $primaryColor;
         border: none;
