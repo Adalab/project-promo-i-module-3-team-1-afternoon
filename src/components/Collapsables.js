@@ -1,14 +1,22 @@
 import React from 'react';
 import '../stylesheets/Collapsables.scss';
+import '../stylesheets/ProfilePage.scss';
 
-const Collapsables = props =>{
-    return(
-        <div className="form__closed">
-                <h2 className="form__title"><i className="form__icon far fa-object-ungroup"></i>Diseña</h2>
-                <button className="form__arrow--design form__arrow--collapse" aria-label="Desplegar"><i className="fas fa-chevron-down"></i></button>
+// const Collapsables = props =>{
+
+
+class Collapsables extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div className="form__closed">
+             
+                {this.props.children}   
+                
             </div>
-    );
-
+        );
+    }
 }
-
 export default Collapsables;
