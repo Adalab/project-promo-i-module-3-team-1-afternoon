@@ -6,8 +6,10 @@ import '../stylesheets/ProfilePage.scss';
 
 
 class FormList extends React.Component {
+
   constructor(props) {
     super(props);
+
   }
   render() {
     console.log('hey :)');
