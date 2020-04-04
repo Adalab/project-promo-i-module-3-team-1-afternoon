@@ -1,7 +1,9 @@
 import React from 'react';
 import Collapsables from './Collapsables';
 import Design from './Design';
+import Share from './Share.js';
 import Fill from './Fill';
+
 import '../stylesheets/ProfilePage.scss';
 
 
@@ -30,7 +32,7 @@ class FormList extends React.Component {
           <Collapsables>
             <h2 className="form__title"><i className="form__icon fas fa-share-alt"></i>Comparte</h2> <button className="form__arrow--fill" aria-label="Desplegar"><i className="fas fa-chevron-down"></i></button>
           </Collapsables>
-           {/* Share*/} 
+           <Share/> 
 
         </ul>
       </div>
