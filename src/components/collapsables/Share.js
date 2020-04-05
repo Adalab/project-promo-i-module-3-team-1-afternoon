@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/Share.scss';
+import '../../stylesheets/Share.scss';
 
 class Share extends React.Component {
     constructor(props) {
@@ -7,7 +7,7 @@ class Share extends React.Component {
     }
     render() {
         return (
-            
+            <section className="form__sections form__share">
                 <div clasName="form__open" id="form__share--open">
                     <div className="create-card-button-container">
                             <button id="createCardButton" type="button" className="create-card-button off">
@@ -23,6 +23,7 @@ class Share extends React.Component {
                             <i class="fab fa-twitter"></i> Compartir en Twitter</a>
                     </div>
                 </div>
+                </section>
                 );
             }
 }

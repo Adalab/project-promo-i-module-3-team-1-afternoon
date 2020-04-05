@@ -1,8 +1,8 @@
 import React from 'react';
-import Collapsables from './Collapsables';
-import Design from './Design';
-import Share from './Share.js';
-import Fill from './Fill';
+import CollapsableItem from './collapsables/CollapsableItem';
+import Design from './collapsables/Design';
+import Share from './collapsables/Share.js';
+import Fill from './collapsables/Fill';
 
 import '../stylesheets/ProfilePage.scss';
 
@@ -11,28 +11,39 @@ class FormList extends React.Component {
 
   constructor(props) {
     super(props);
-
   }
+
   render() {
-    console.log('hey :)');
+    console.log(this.props);
     return (
       <div className="grid-1">
         <ul id="formList" className="formList">
-          <Collapsables>
-            <h2 className="form__title"><i className="form__icon far fa-object-ungroup"></i>Diseña</h2>
-            <button className="form__arrow--design" aria-label="Desplegar"><i className="fas fa-chevron-down"></i></button>
-          </Collapsables>
+          <CollapsableItem collapsableTitle='Diseña'
+                            handleCollapse={this.props.handleCollapse}
+                            id = 'collapse-1'
+                            activePanel = {this.props.activePanel}
+          >
+            {/* <h2 className="form__title"><i className="form__icon far fa-object-ungroup"></i>Diseña</h2> */}
+            <Design />
+          </CollapsableItem>
         
-        <Design />
+          <CollapsableItem collapsableTitle='Rellena'
+                            handleCollapse={this.props.handleCollapse}
+                            id = 'collapse-2'
+                            activePanel = {this.props.activePanel}
+          >
+            {/* <h2 className="form__title"><i className="form__icon far fa-keyboard"></i>Rellena</h2> <button className="form__arrow--fill" aria-label="Desplegar"><i className="fas fa-chevron-down"></i></button> */}
+            <Fill />
+          </CollapsableItem>
 
-          <Collapsables>
-            <h2 className="form__title"><i className="form__icon far fa-keyboard"></i>Rellena</h2> <button className="form__arrow--fill" aria-label="Desplegar"><i className="fas fa-chevron-down"></i></button>
-          </Collapsables>
-        <Fill />
-          <Collapsables>
-            <h2 className="form__title"><i className="form__icon fas fa-share-alt"></i>Comparte</h2> <button className="form__arrow--fill" aria-label="Desplegar"><i className="fas fa-chevron-down"></i></button>
-          </Collapsables>
-           <Share/> 
+        <CollapsableItem collapsableTitle='Comparte'
+                          handleCollapse={this.props.handleCollapse}
+                          id = 'collapse-3'
+                          activePanel = {this.props.activePanel}
+        >
+            {/* <h2 className="form__title"><i className="form__icon fas fa-share-alt"></i>Comparte</h2> <button className="form__arrow--fill" aria-label="Desplegar"><i className="fas fa-chevron-down"></i></button> */}
+            <Share/> 
+        </CollapsableItem>
 
         </ul>
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
-import '../stylesheets/Fill.scss'
-import Avatar from './Avatar';
+import '../../stylesheets/Fill.scss'
+import Avatar from '../Avatar';
+
 class Fill extends React.Component{
     constructor(props){
         super(props);
@@ -8,7 +9,7 @@ class Fill extends React.Component{
     render(){
         return(
             <section className="form__sections form__fill">
-            <div className="form__open hidden" id="form__fill--open">
+            <div className="form__open" id="form__fill--open">
                 <div className="form__flex">
                 <label for="name">Nombre completo<span>*</span></label>
                 <input 

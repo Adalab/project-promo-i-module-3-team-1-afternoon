@@ -1,8 +1,14 @@
 
 @import 'core/variables';
 
+.active {
+    display:block;
 
-.form__closed {
+}
+.newHidden{
+    display:none;
+}
+.collapseTitle {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

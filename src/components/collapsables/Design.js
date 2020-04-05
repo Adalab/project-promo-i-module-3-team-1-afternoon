@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/Design.scss';
+import '../../stylesheets/Design.scss';
 
 class Design extends React.Component {
     constructor(props) {
@@ -7,8 +7,8 @@ class Design extends React.Component {
     }
     render() {
         return (
-
-            <div className="palettesContainer">
+            <section className="form__sections  form__design">
+            <div className="palettesContainer"> {/* aqui newHidden */}
                     
             <h3>colores</h3>
             
@@ -47,7 +47,7 @@ class Design extends React.Component {
 
             </div>
         </div>
-    
+    </section>
 
         );
     }

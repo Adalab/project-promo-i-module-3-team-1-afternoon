@@ -2,6 +2,10 @@
 @import './core/variables';
 @import './core/mixins';
 
+.active {
+    display:block;
+
+}
 .palettesContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
