@@ -2,8 +2,10 @@
 @import 'core/variables';
 @import './core/mixins';
 
+.active{
+    display:block;
 
-
+}
 .create-card-button-container{
     text-align: center;
     margin-left: auto;
