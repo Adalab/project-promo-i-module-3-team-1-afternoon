@@ -8,15 +8,8 @@ import '../stylesheets/ProfilePage.scss';
 
 
 class FormList extends React.Component {
-<<<<<<< HEAD
   constructor(props) {
     super(props);
-=======
-
-  constructor(props) {
-    super(props);
-
->>>>>>> f0bcbacea79472039c11193467bf605f7b148aac
   }
   render() {
     console.log('hey :)');
