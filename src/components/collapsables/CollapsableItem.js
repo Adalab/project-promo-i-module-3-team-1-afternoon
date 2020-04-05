@@ -1,0 +1,28 @@
+import React from 'react';
+import '../../stylesheets/Collapsables.scss';
+
+
+class CollapsableItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleCLick = this.handleCLick.bind(this)
+    }
+
+    handleCLick(evt){
+        this.props.handleCollapse(evt.currentTarget.id)
+    }
+
+    render() {
+        
+        return (
+           <div className="Collapsable__container">
+                <div id={this.props.id} className={`collapseTitle ${this.props.activePanel === this.props.id ? "active" : ""}`} onClick={this.handleCLick}>
+                    <h2 className="form__title"><i className="form__icon far fa-object-ungroup"></i>{this.props.collapsableTitle}</h2>
+                    <button className="form__arrow--design" aria-label="Desplegar"><i className="fas fa-chevron-down"></i></button>
+                </div>
+                {this.props.children}   
+            </div>
+        );
+    }
+}
+export default CollapsableItem;
