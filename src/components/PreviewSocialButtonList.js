@@ -8,10 +8,10 @@ class PreviewSocialButtonList extends React.Component {
   render() {
     return (
       <ul id="PreviewSocialButtonList" className="card__socialbuttons--list">
-        <SocialButton/>
-        <SocialButton/>
-        <SocialButton/>
-        <SocialButton/>
+        <SocialButton iconType="far fa-envelope"/>
+        <SocialButton iconType="fas fa-mobile-alt"/>
+        <SocialButton iconType="fab fa-linkedin-in"/>
+        <SocialButton iconType="fab fa-github-alt"/>
       </ul>
     );
   }

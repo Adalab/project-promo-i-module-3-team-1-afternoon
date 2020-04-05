@@ -131,7 +131,7 @@ $nameFont: $previewText;
                     width: 32px;
                     height: 32px;
                     border-radius: 50%;
-                    border: 2px solid $palete1Color1;
+                    border: 2px solid $palete1Color3;
                     margin-right: 10px;
                     color: $palete1Color1;
                     .hidden {
@@ -140,6 +140,7 @@ $nameFont: $previewText;
                     .icon {
                       @include centerAll;
                       font-size: 18px;
+                      color: $palete1Color1;
                     }              
                 }
             }
