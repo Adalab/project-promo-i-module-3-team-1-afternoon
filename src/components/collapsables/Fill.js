@@ -8,7 +8,7 @@ class Fill extends React.Component{
     }
     render(){
         return(
-            <section className="form__sections form__fill">
+            <section  className="form__sections form__fill">
             <div className="form__open" id="form__fill--open">
                 <div className="form__flex">
                 <label for="name">Nombre completo<span>*</span></label>
