@@ -17,8 +17,10 @@ class CollapsableItem extends React.Component {
         return (
            <div className="Collapsable__container">
                 <div id={this.props.id} className="collapseTitle" onClick={this.handleCLick}>
-                    <h2 className="form__title"><i className="form__icon far fa-object-ungroup"></i>{this.props.collapsableTitle}</h2>
-                    <button className="form__arrow--design" aria-label="Desplegar"><i className="fas fa-chevron-down"></i></button>
+                    <h2 className="form__title"><i className={this.props.icon}></i>{this.props.collapsableTitle}</h2>
+                    <button className= {`form__arrow--design ${this.props.rotatearrow === this.props.id ? "rotate" : ""}`} aria-label="Desplegar">
+                        <i className="fas fa-chevron-down"></i>
+                    </button>
                 </div>
                 <div className={`newHidden ${this.props.activePanel === this.props.id ? "active" : ""}`}>
                     {this.props.children}   
@@ -28,3 +30,4 @@ class CollapsableItem extends React.Component {
     }
 }
 export default CollapsableItem;
+

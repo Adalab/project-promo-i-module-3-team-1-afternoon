@@ -1,6 +1,9 @@
 import React from 'react';
+import FillInput from './FillInput';
+import '../../stylesheets/Collapsables.scss';
 import '../../stylesheets/Fill.scss'
-import Avatar from '../Avatar';
+import Avatar from './Avatar';
+
 
 class Fill extends React.Component{
     constructor(props){
@@ -9,71 +12,76 @@ class Fill extends React.Component{
     render(){
         return(
             <section  className="form__sections form__fill">
-            <div className="form__open" id="form__fill--open">
-                <div className="form__flex">
-                <label for="name">Nombre completo<span>*</span></label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    placeholder="Ej. Sally Jill" 
-                    maxlength="20" 
-                    required/>
+                <div className="form__open" id="form__fill--open">
                 
-                <label for="job">Profesión <span>*</span></label>
-                <input 
-                    type="text" 
-                    id="job" 
-                    name="job" 
-                    placeholder="Ej: Front-end unicorn" 
-                    maxlength="25" 
-                    required/>
-                
-                <label for="photo">Imagen de perfil <span>*</span></label>
-                <input
-                     type="file" 
-                     id="photo" 
-                     name="photo" 
-                     className="hidden hiddenJS js__photo--file" 
-                     required/>
-
-                    <Avatar className="photo__upload"/>
-                
-                
-                <label for="email">Email <span>*</span></label>
-                <input
-                     type="email"
-                      id="email" 
-                      name="email" 
-                      placeholder="Ej: sally-hill@gmail.com" 
-                      required/>
-                
-                <label for="phone">Teléfono</label>
-                <input 
-                    type="tel" 
-                    id="phone" 
-                    name="phone" 
-                    placeholder="Ej: 555-55-55-55"
-                    />
-                
-                <label for="linkedin">LinkedIn <span>*</span></label>
-                <input 
-                    type="text" 
-                    id="linkedin" 
-                    name="linkedin" 
-                    placeholder="Ej: linkedin.com/in/sally.hill" 
-                    required/>
-                
-                <label for="github">GitHub <span>*</span></label>
-                <input 
-                    type="text" 
-                    id="github" 
-                    name="github" 
-                    placeholder="Ej: @sally-hill" 
-                    required/>
-            </div>
-        </div>
-        </section>
+                <FillInput  htmlFor="name"
+                            labelName="Nombre completo *"
+                            inputType="text"
+                            inputId="name"
+                            inputName="name"
+                            placeHolder="Ej. Sally Jill" 
+                            maxLength={20}
+                            required = "required" /* se cambia */
+                />
+                <FillInput
+                            htmlFor="job"
+                            labelName="Profesión *"
+                            inputType="text"
+                            inputId="job"
+                            inputName="job"
+                            placeHolder="Ej: Front-end unicorn" 
+                            maxLength={25}
+                            required = "required" /* se cambia */ 
+                />
+                 <FillInput
+                            htmlFor="photo"
+                            labelName="Imagen de perfil *"
+                            inputType="file"
+                            inputId="photo"
+                            inputName="photo"
+                            required = "required" /* se cambia */ 
+                            inputClassName= "hidden hiddenJS js__photo--file"
+                />
+                <Avatar/>
+                 <FillInput
+                            htmlFor="email"
+                            labelName="Email *"
+                            inputType="email"
+                            inputId="email"
+                            inputName="photo"
+                            required = "required" /* se cambia */ 
+                            placeHolder= "Ej: sally-hill@gmail.com" 
+                />
+                 <FillInput
+                            htmlFor="phone"
+                            labelName="Teléfono"
+                            inputType="tel"
+                            inputId="phone"
+                            inputName="phone"
+                            required = "required"
+                            placeHolder= "Ej: 555-55-55-55"
+                />
+                <FillInput
+                            htmlFor="linkedin"
+                            labelName="LinkedIn *"
+                            inputType="text"
+                            inputId="linkedin"
+                            inputName="linkedin"
+                            required = "required"
+                            placeHolder= "Ej: linkedin.com/in/sally.hill" 
+                />
+                 <FillInput
+                            htmlFor="github"
+                            labelName="Github *"
+                            inputType="text"
+                            inputId="github"
+                            inputName="github"
+                            required = "required"
+                            placeHolder= "Ej: @sally-hill" 
+                />
+               
+                </div>
+            </section>
         );
     }
 }
