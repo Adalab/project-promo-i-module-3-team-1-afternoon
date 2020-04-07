@@ -22,6 +22,7 @@ class FormList extends React.Component {
                             handleCollapse={this.props.handleCollapse}
                             id = 'collapse-1'
                             activePanel = {this.props.activePanel}
+                            icon = 'form__icon far fa-object-ungroup'
           >
             {/* <h2 className="form__title"><i className="form__icon far fa-object-ungroup"></i>Diseña</h2> */}
             <Design />
@@ -31,6 +32,7 @@ class FormList extends React.Component {
                             handleCollapse={this.props.handleCollapse}
                             id = 'collapse-2'
                             activePanel = {this.props.activePanel}
+                            icon = 'form__icon far fa-keyboard'
           >
             {/* <h2 className="form__title"><i className="form__icon far fa-keyboard"></i>Rellena</h2> <button className="form__arrow--fill" aria-label="Desplegar"><i className="fas fa-chevron-down"></i></button> */}
             <Fill />
@@ -40,6 +42,7 @@ class FormList extends React.Component {
                           handleCollapse={this.props.handleCollapse}
                           id = 'collapse-3'
                           activePanel = {this.props.activePanel}
+                          icon = 'form__icon fas fa-share-alt'
         >
             {/* <h2 className="form__title"><i className="form__icon fas fa-share-alt"></i>Comparte</h2> <button className="form__arrow--fill" aria-label="Desplegar"><i className="fas fa-chevron-down"></i></button> */}
             <Share/> 
