@@ -16,6 +16,7 @@ class FillInput extends React.Component{
                         maxlength={this.props.maxLength}
                         required={this.props.required}
                         className={this.props.inputClassName}
+                        onChange={this.props.onChange}
                 />
             </div>
 

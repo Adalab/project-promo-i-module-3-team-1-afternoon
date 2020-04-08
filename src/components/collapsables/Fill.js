@@ -8,6 +8,12 @@ import Avatar from './Avatar';
 class Fill extends React.Component{
     constructor(props){
         super(props);
+        this.state={
+            name:''
+        };
+       function changeNameValue(event) {
+            this.setState ({ name: event.currentTarget.value})
+        }
     }
     render(){
         return(
@@ -21,7 +27,10 @@ class Fill extends React.Component{
                             inputName="name"
                             placeHolder="Ej. Sally Jill" 
                             maxLength={20}
-                            required = "required" /* se cambia */
+                            dataName={this.state.name}
+                            changeNameValue ={this.props.changeNameValue}
+                            required
+
                 />
                 <FillInput
                             htmlFor="job"
@@ -31,7 +40,7 @@ class Fill extends React.Component{
                             inputName="job"
                             placeHolder="Ej: Front-end unicorn" 
                             maxLength={25}
-                            required = "required" /* se cambia */ 
+                            required
                 />
                  <FillInput
                             htmlFor="photo"
@@ -39,8 +48,8 @@ class Fill extends React.Component{
                             inputType="file"
                             inputId="photo"
                             inputName="photo"
-                            required = "required" /* se cambia */ 
                             inputClassName= "hidden hiddenJS js__photo--file"
+                            required
                 />
                 <Avatar/>
                  <FillInput
@@ -49,8 +58,8 @@ class Fill extends React.Component{
                             inputType="email"
                             inputId="email"
                             inputName="photo"
-                            required = "required" /* se cambia */ 
                             placeHolder= "Ej: sally-hill@gmail.com" 
+                            required
                 />
                  <FillInput
                             htmlFor="phone"
@@ -58,8 +67,8 @@ class Fill extends React.Component{
                             inputType="tel"
                             inputId="phone"
                             inputName="phone"
-                            required = "required"
                             placeHolder= "Ej: 555-55-55-55"
+                            required
                 />
                 <FillInput
                             htmlFor="linkedin"
@@ -67,8 +76,8 @@ class Fill extends React.Component{
                             inputType="text"
                             inputId="linkedin"
                             inputName="linkedin"
-                            required = "required"
                             placeHolder= "Ej: linkedin.com/in/sally.hill" 
+                            required
                 />
                  <FillInput
                             htmlFor="github"
@@ -76,8 +85,8 @@ class Fill extends React.Component{
                             inputType="text"
                             inputId="github"
                             inputName="github"
-                            required = "required"
                             placeHolder= "Ej: @sally-hill" 
+                            required
                 />
                
                 </div>
