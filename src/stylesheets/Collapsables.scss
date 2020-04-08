@@ -1,6 +1,7 @@
 
 @import 'core/variables';
-
+.rotate{
+     transform: rotate(180deg);}
 .active {
     display:block;
 
