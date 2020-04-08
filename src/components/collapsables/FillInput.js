@@ -4,8 +4,14 @@ import React from 'react';
 class FillInput extends React.Component{
     constructor(props){
     super(props)
+    this.changeInputValue= this.changeInputValue.bind(this)
+    }
+    changeInputValue(event){
+        this.props.handleInputValue(event.target)
+            
     }
     render(){
+        console.log(this.props)
         return(
             <div className="form__flex">
                 <label htmlFor={this.props.htmlFor}>{this.props.labelName}</label>
@@ -14,9 +20,10 @@ class FillInput extends React.Component{
                         name={this.props.inputName}
                         placeholder={this.props.placeHolder}
                         maxlength={this.props.maxLength}
-                        required={this.props.required}
                         className={this.props.inputClassName}
-                        onChange={this.props.onChange}
+                        value={this.props.value}
+                        onChange={this.changeInputValue}
+                        required={this.props.required}
                 />
             </div>
 

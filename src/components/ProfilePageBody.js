@@ -6,11 +6,19 @@ class ProfilePageBody extends React.Component {
   constructor(props) {
     super(props);
     this.handleCollapse = this.handleCollapse.bind(this)
+    this.handleInputValue= this.handleInputValue.bind(this);
     this.state = {
       activePanel:'' ,
       rotatearrow: '',
+      name:''
+     
 
     }
+  }
+  handleInputValue(currentTarget) {
+    this.setState ({
+      name:currentTarget.value
+    })
   }
 
   handleCollapse(targetId) {
@@ -24,12 +32,18 @@ class ProfilePageBody extends React.Component {
   }
 
   render() {
+    
     return (
         <div id="profilePageBody" className="profilePageBody">
-            <CardPreview></CardPreview>
+            <CardPreview/>
             <FormList handleCollapse={this.handleCollapse}
-            rotatearrow={this.state.rotatearrow}
-             activePanel={this.state.activePanel}></FormList>
+                      rotatearrow={this.state.rotatearrow}
+                      activePanel={this.state.activePanel}
+                      value={this.state.name}
+                      handleInputValue={this.handleInputValue}
+
+
+            />
         </div>
     );
   }

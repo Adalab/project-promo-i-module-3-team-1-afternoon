@@ -8,14 +8,11 @@ import Avatar from './Avatar';
 class Fill extends React.Component{
     constructor(props){
         super(props);
-        this.state={
-            name:''
-        };
-       function changeNameValue(event) {
-            this.setState ({ name: event.currentTarget.value})
-        }
-    }
+        
+    };
+
     render(){
+        
         return(
             <section  className="form__sections form__fill">
                 <div className="form__open" id="form__fill--open">
@@ -27,9 +24,11 @@ class Fill extends React.Component{
                             inputName="name"
                             placeHolder="Ej. Sally Jill" 
                             maxLength={20}
-                            dataName={this.state.name}
-                            changeNameValue ={this.props.changeNameValue}
+                            value={this.props.value}
+                            handleInputValue={this.props.handleInputValue}
                             required
+                           
+                            
 
                 />
                 <FillInput

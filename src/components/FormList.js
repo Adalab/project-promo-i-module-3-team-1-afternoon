@@ -11,10 +11,11 @@ class FormList extends React.Component {
 
   constructor(props) {
     super(props);
+    
   }
 
   render() {
-    console.log(this.props);
+    
     return (
       <div className="grid-1">
         <ul id="formList" className="formList">
@@ -39,7 +40,9 @@ class FormList extends React.Component {
 
           >
           
-            <Fill />
+            <Fill     value={this.props.value}
+                      handleInputValue={this.props.handleInputValue}
+            />
           </CollapsableItem>
 
         <CollapsableItem collapsableTitle='Comparte'
