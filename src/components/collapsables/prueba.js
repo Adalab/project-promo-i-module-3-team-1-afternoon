@@ -1,7 +1,7 @@
 import React from 'react';
 import FormList from './FormList';
 import CardPreview from './CardPreview';
-
+​
 class ProfilePageBody extends React.Component {
   constructor(props) {
     super(props);
@@ -9,11 +9,9 @@ class ProfilePageBody extends React.Component {
     this.state = {
       activePanel:'' ,
       rotatearrow: '',
-      
-
     }
   }
-
+​
   handleCollapse(targetId) {
     if(targetId !== this.state.activePanel){
       this.setState({activePanel:targetId})
@@ -23,16 +21,17 @@ class ProfilePageBody extends React.Component {
       this.setState({rotatearrow: ''})
     }
   }
-
+​
   render() {
-    return (
-        <div id="profilePageBody" className="profilePageBody">
-            <CardPreview></CardPreview>
-            <FormList handleCollapse={this.handleCollapse}
-            rotatearrow={this.state.rotatearrow}
-             activePanel={this.state.activePanel}></FormList>
-        </div>
-    );
+        return (
+            <div id="profilePageBody" className="profilePageBody">
+                <CardPreview></CardPreview>
+                <FormList handleCollapse={this.handleCollapse}
+                rotatearrow={this.state.rotatearrow}
+                 activePanel={this.state.activePanel}></FormList>
+            </div>
+        );
   }
 }
+​
 export default ProfilePageBody;

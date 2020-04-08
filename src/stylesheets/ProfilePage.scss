@@ -167,7 +167,30 @@ $nameFont: $previewText;
                 margin-bottom: 10px;              
             }
             .card__socialbuttons--list{
-
+                padding-left: 20px;
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;            
+                .card__socialbuttons--box{
+                    display: inline-block;
+                    position: relative;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    border: 2px solid $palete1Color3;
+                    margin-right: 10px;
+                    color: $palete1Color1;
+                    .hidden {
+                        display: none;
+                      }      
+                    .icon {
+                      @include centerAll;
+                      font-size: 18px;
+                      color: $palete1Color1;
+                    }              
+                }
             }
         }
     }
