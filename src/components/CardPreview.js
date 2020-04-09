@@ -15,7 +15,9 @@ class CardPreview extends React.Component {
           <PreviewResetButton />
           <div id="card" className="card" >
             <PreviewProfileInfo
-              valuepalette={this.props.palette}
+              value={this.props.checked}
+              name={this.props.valueName}
+              job={this.props.valueJob}
             />
             <PreviewAvatarBox/>
             <PreviewSocialButtonList/>

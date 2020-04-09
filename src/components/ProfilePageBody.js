@@ -47,9 +47,9 @@ class ProfilePageBody extends React.Component {
 
     return (
       <div id="profilePageBody" className="profilePageBody">
-        <CardPreview 
-         valuepalette={this.state.userInfo.palette}
-        
+        <CardPreview valueName={this.state.userInfo.name}
+          valueJob={this.state.userInfo.job}
+          checked={this.state.userInfo.palette}
         />
         <FormList handleCollapse={this.handleCollapse}
           rotatearrow={this.state.rotatearrow}
@@ -63,8 +63,9 @@ class ProfilePageBody extends React.Component {
           valueGithub={this.state.userInfo.github}
           handleInputValue={this.handleInputValue}
         />
+
       </div>
-    );
-  }
+    )
+}
 }
 export default ProfilePageBody;
