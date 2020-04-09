@@ -58,7 +58,7 @@ class Fill extends React.Component{
                             labelName="Email *"
                             inputType="email"
                             inputId="email"
-                            inputName="photo"
+                            inputName="email"
                             placeHolder= "Ej: sally-hill@gmail.com" 
                             value={this.props.valueEmail}
                             handleInputValue={this.props.handleInputValue}
