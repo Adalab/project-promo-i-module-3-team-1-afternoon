@@ -20,7 +20,9 @@ class CardPreview extends React.Component {
               job={this.props.valueJob}
             />
             <PreviewAvatarBox/>
-            <PreviewSocialButtonList/>
+            <PreviewSocialButtonList
+            value={this.props.checked}
+            />
           </div>
         </div>
       </div>

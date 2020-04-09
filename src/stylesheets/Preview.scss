@@ -144,46 +144,34 @@ $nameFont: $previewText;
     color:$palete4Color1,
 
 }
-// .infoStyle2 {
-//   .preview__profileInfo {
-//     border-left: 5px solid $palete2Color2;
-
-//     .nameText {
-//       color: $palete2Color1;
-//     }
-//   }
-// }
-
-// .infoStyle3 {
-//   .preview__profileInfo {
-//     border-left: 5px solid $palete3Color2;
-
-//     .nameText {
-//       color: $palete3Color1;
-//     }
-//   }
-// }
-
-// .infoStyle4 {
-//   .preview__profileInfo {
-//     border-left: 5px solid $palete4Color2;
-
-//     .nameText {
-//       color: $palete4Color1;
-//     }
-//   }
-// }
 
 
 .buttonStyle1 {
-    border: 2px solid $borderColor;
+    border:  $borderColor;
+    .icon{
+    color: $palete1Color1;
+  
+
+    }
 }
 .buttonStyle2 {
-    border: 2px solid $palete2Color3;
+    border:$palete2Color3;
+    .icon{
+        color: $palete2Color3;
+    
+        }
 }
 .buttonStyle3 {
-    border: 2px solid $palete3Color3;
+    border: $palete3Color3;
+    .icon{
+        color: $palete3Color3;
+    
+        }
 }
 .buttonStyle4 {
-    border: 2px solid $palete4Color3;
+    border:  $palete4Color3;
+    .icon{
+        color: $palete4Color3;
+
+        }
 }

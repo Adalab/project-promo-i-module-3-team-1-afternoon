@@ -9,9 +9,7 @@ class PreviewProfileInfo extends React.Component {
   }
   render() {
     return (
-      // card__profileInfo--box
-      // card__profileInfo--name
-    
+      
       <div id="PreviewProfileInfo" className={`card__profileInfo--box ${this.props.value === "1" ? "infoStyle1" : this.props.value === "2" ? "infoStyle2" : this.props.value === "3" ? "infoStyle3" : "infoStyle4"}`}>
           <p id="PreviewProfileInfoName" className="card__profileInfo--name" >
           {(this.props.name === '' ? 'Nombre Apellido' : this.props.name)}
@@ -22,9 +20,5 @@ class PreviewProfileInfo extends React.Component {
     );
   }
 }
-/* PreviewProfileInfo.defaultProps = {
-  name: 'Nombre Apellido',
-  job: 'Front-End Developer'
-} */
 
 export default PreviewProfileInfo;
