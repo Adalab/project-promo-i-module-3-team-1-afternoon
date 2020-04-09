@@ -28,7 +28,12 @@ class FormList extends React.Component {
 
           >
         
-            <Design />
+            <Design 
+                  checked = {this.props.valuepalette}
+                  handleInputValue={this.props.handleInputValue}
+                  
+                  
+            />
           </CollapsableItem>
         
           <CollapsableItem collapsableTitle='Rellena'

@@ -30,4 +30,3 @@ class CollapsableItem extends React.Component {
     }
 }
 export default CollapsableItem;
-
