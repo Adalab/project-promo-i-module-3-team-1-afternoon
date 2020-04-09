@@ -16,7 +16,8 @@ class ProfilePageBody extends React.Component {
       email:'',
       phone:'',
       linkedin:'',
-      github:''
+      github:'',
+   
       }
 
     }
@@ -55,6 +56,13 @@ class ProfilePageBody extends React.Component {
         <div id="profilePageBody" className="profilePageBody">
             <CardPreview  valueName={this.state.userInfo.name}
                           valueJob={this.state.userInfo.job}
+                          valueEmail={this.state.userInfo.email}
+                          valuePhone={this.state.userInfo.phone}
+                          valueLinkedin={this.state.userInfo.linkedin}
+                          valueGithub={this.state.userInfo.github}
+                          
+                          
+
             />
             <FormList     handleCollapse={this.handleCollapse}
                           rotatearrow={this.state.rotatearrow}
