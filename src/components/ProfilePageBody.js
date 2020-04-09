@@ -10,6 +10,7 @@ class ProfilePageBody extends React.Component {
     this.state = {
       activePanel: '',
       rotatearrow: '',
+
       userInfo: {
         palette: '',
         name: '',
@@ -18,6 +19,7 @@ class ProfilePageBody extends React.Component {
         phone: '',
         linkedin: '',
         github: ''
+
       }
     }
   }
@@ -45,12 +47,20 @@ class ProfilePageBody extends React.Component {
 
   render() {
 
+
+    
     return (
-      <div id="profilePageBody" className="profilePageBody">
-        <CardPreview valueName={this.state.userInfo.name}
-          valueJob={this.state.userInfo.job}
-          checked={this.state.userInfo.palette}
-        />
+        <div id="profilePageBody" className="profilePageBody">
+            <CardPreview  valueName={this.state.userInfo.name}
+                          valueJob={this.state.userInfo.job}
+                          valueEmail={this.state.userInfo.email}
+                          valuePhone={this.state.userInfo.phone}
+                          valueLinkedin={this.state.userInfo.linkedin}
+                          valueGithub={this.state.userInfo.github}
+                          checked={this.state.userInfo.palette}
+                          
+                       />
+          
         <FormList handleCollapse={this.handleCollapse}
           rotatearrow={this.state.rotatearrow}
           activePanel={this.state.activePanel}

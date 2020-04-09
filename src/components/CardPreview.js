@@ -14,15 +14,20 @@ class CardPreview extends React.Component {
         <div id="cardPreview__centeredBox" className="cardPreview__centeredBox" >
           <PreviewResetButton />
           <div id="card" className="card" >
+
             <PreviewProfileInfo
               value={this.props.checked}
               name={this.props.valueName}
               job={this.props.valueJob}
             />
             <PreviewAvatarBox/>
-            <PreviewSocialButtonList
-            value={this.props.checked}
-            />
+           
+            <PreviewSocialButtonList  value={this.props.checked}
+                                       email={this.props.valueEmail}
+                                       phone={this.props.valuePhone}
+                                       linkedin={this.props.valueLinkedin}
+                                       github={this.props.valueGithub}
+                                       />
           </div>
         </div>
       </div>

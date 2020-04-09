@@ -6,7 +6,7 @@ class SocialButton extends React.Component {
     }
     render() {
         return (
-            <li id="socialButtonBox" className="card__socialbuttons--box">
+            <li id="socialButtonBox" className={this.props.class}>
                 <a 
                     id="emailButtonLink"
                     class="preview__socialButton preview__socialButton--email buttonStyle1" 
@@ -23,3 +23,7 @@ class SocialButton extends React.Component {
 
 
 export default SocialButton;
+
+
+
+//className="card__socialbuttons--box"
