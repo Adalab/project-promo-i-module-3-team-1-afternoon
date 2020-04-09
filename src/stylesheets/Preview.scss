@@ -115,54 +115,64 @@ $nameFont: $previewText;
 
 //CLASSES TO BE CALLED
 
-.infoStyle1 {
-  .card__profileInfo--box {
-    border-left: 5px solid $palete1Color2;
+// .infoStyle1 {
+//   .card__profileInfo--box {
+//     border-left: 5px solid $palete1Color2;
 
-    .card__profileInfo--name {
-      color: $formText;
-    }
-  }
-}
-.red{
+//     .card__profileInfo--name {
+//       color: $formText;
+//     }
+//   }
+// }
+.infoStyle1{
     border-left: 5px solid $palete1Color2;
     color:$palete1Color1,
 }
 
-.black {
-    border-left: 5px solid $palete2Color2;
-    color:$palete1Color2,
-
-}
 .infoStyle2 {
-  .preview__profileInfo {
     border-left: 5px solid $palete2Color2;
+    color:$palete2Color1,
 
-    .nameText {
-      color: $palete2Color1;
-    }
-  }
 }
-
 .infoStyle3 {
-  .preview__profileInfo {
     border-left: 5px solid $palete3Color2;
+    color:$palete3Color1,
 
-    .nameText {
-      color: $palete3Color1;
-    }
-  }
 }
-
 .infoStyle4 {
-  .preview__profileInfo {
     border-left: 5px solid $palete4Color2;
+    color:$palete4Color1,
 
-    .nameText {
-      color: $palete4Color1;
-    }
-  }
 }
+// .infoStyle2 {
+//   .preview__profileInfo {
+//     border-left: 5px solid $palete2Color2;
+
+//     .nameText {
+//       color: $palete2Color1;
+//     }
+//   }
+// }
+
+// .infoStyle3 {
+//   .preview__profileInfo {
+//     border-left: 5px solid $palete3Color2;
+
+//     .nameText {
+//       color: $palete3Color1;
+//     }
+//   }
+// }
+
+// .infoStyle4 {
+//   .preview__profileInfo {
+//     border-left: 5px solid $palete4Color2;
+
+//     .nameText {
+//       color: $palete4Color1;
+//     }
+//   }
+// }
 
 
 .buttonStyle1 {

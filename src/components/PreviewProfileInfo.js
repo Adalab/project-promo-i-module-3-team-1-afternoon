@@ -12,7 +12,7 @@ class PreviewProfileInfo extends React.Component {
       // card__profileInfo--box
       // card__profileInfo--name
     
-      <div id="PreviewProfileInfo" className={`card__profileInfo--box ${this.props.value === "1" ? "red" : this.props.value === "2" ? "black" : this.props.value === "3" ? "red" : "infoStyle1"}`}>
+      <div id="PreviewProfileInfo" className={`card__profileInfo--box ${this.props.value === "1" ? "infoStyle1" : this.props.value === "2" ? "infoStyle2" : this.props.value === "3" ? "infoStyle3" : "infoStyle4"}`}>
           <p id="PreviewProfileInfoName" className="card__profileInfo--name" >
           {(this.props.name === '' ? 'Nombre Apellido' : this.props.name)}
           </p>
