@@ -9,7 +9,7 @@ class PreviewProfileInfo extends React.Component {
     return (
       <div id="PreviewProfileInfo" className="card__profileInfo--box">
           <p id="PreviewProfileInfoName" className="card__profileInfo--name">{this.props.name}</p>
-          <p id="PreviewProfileInfoJob" className="card__profileInfo--job">{this.props.name}</p>
+          <p id="PreviewProfileInfoJob" className="card__profileInfo--job">{this.props.job}</p>
       </div>
     );
   }
