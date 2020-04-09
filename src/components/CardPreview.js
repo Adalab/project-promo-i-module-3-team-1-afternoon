@@ -16,9 +16,14 @@ class CardPreview extends React.Component {
           <div id="card" className="card" >
             <PreviewProfileInfo name={this.props.valueName}
                                 job={this.props.valueJob}
+                              
             />
             <PreviewAvatarBox/>
-            <PreviewSocialButtonList/>
+            <PreviewSocialButtonList   email={this.props.valueEmail}
+                                       phone={this.props.valuePhone}
+                                       linkedin={this.props.valueLinkedin}
+                                       github={this.props.valueGithub}
+                                       />
           </div>
         </div>
       </div>
