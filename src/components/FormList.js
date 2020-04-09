@@ -40,7 +40,12 @@ class FormList extends React.Component {
 
           >
           
-            <Fill     value={this.props.value}
+            <Fill     valueName={this.props.valueName}
+                      valueJob={this.props.valueJob}
+                      valueEmail={this.props.valueEmail}
+                      valuePhone={this.props.valuePhone}
+                      valueLinkedin={this.props.valueLinkedin}
+                      valueGithub={this.props.valueGithub}
                       handleInputValue={this.props.handleInputValue}
             />
           </CollapsableItem>

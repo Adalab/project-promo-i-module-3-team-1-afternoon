@@ -7,7 +7,8 @@ class FillInput extends React.Component{
     this.changeInputValue= this.changeInputValue.bind(this)
     }
     changeInputValue(event){
-        this.props.handleInputValue(event.target)
+        this.props.handleInputValue(event.currentTarget.name, event.currentTarget.value)
+        
             
     }
     render(){

@@ -24,7 +24,7 @@ class Fill extends React.Component{
                             inputName="name"
                             placeHolder="Ej. Sally Jill" 
                             maxLength={20}
-                            value={this.props.value}
+                            value={this.props.valueName}
                             handleInputValue={this.props.handleInputValue}
                             required
                            
@@ -39,6 +39,8 @@ class Fill extends React.Component{
                             inputName="job"
                             placeHolder="Ej: Front-end unicorn" 
                             maxLength={25}
+                            value={this.props.valueJob}
+                            handleInputValue={this.props.handleInputValue}
                             required
                 />
                  <FillInput
@@ -58,6 +60,8 @@ class Fill extends React.Component{
                             inputId="email"
                             inputName="photo"
                             placeHolder= "Ej: sally-hill@gmail.com" 
+                            value={this.props.valueEmail}
+                            handleInputValue={this.props.handleInputValue}
                             required
                 />
                  <FillInput
@@ -67,6 +71,8 @@ class Fill extends React.Component{
                             inputId="phone"
                             inputName="phone"
                             placeHolder= "Ej: 555-55-55-55"
+                            value={this.props.valuePhone}
+                            handleInputValue={this.props.handleInputValue}
                             required
                 />
                 <FillInput
@@ -76,6 +82,8 @@ class Fill extends React.Component{
                             inputId="linkedin"
                             inputName="linkedin"
                             placeHolder= "Ej: linkedin.com/in/sally.hill" 
+                            value={this.props.valueLinkedin}
+                            handleInputValue={this.props.handleInputValue}
                             required
                 />
                  <FillInput
@@ -85,6 +93,8 @@ class Fill extends React.Component{
                             inputId="github"
                             inputName="github"
                             placeHolder= "Ej: @sally-hill" 
+                            value={this.props.valueGithub}
+                            handleInputValue={this.props.handleInputValue}
                             required
                 />
                

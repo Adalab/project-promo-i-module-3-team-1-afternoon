@@ -10,14 +10,32 @@ class ProfilePageBody extends React.Component {
     this.state = {
       activePanel:'' ,
       rotatearrow: '',
-      name:''
-     
+      userInfo:{
+      name:'',
+      job:'',
+      email:'',
+      phone:'',
+      linkedin:'',
+      github:''
+      }
 
     }
   }
-  handleInputValue(currentTarget) {
-    this.setState ({
-      name:currentTarget.value
+  handleInputValue(currentTargetName,currentTargetValue) {
+    this.setState (prevState => {
+      return{
+        userInfo:{
+          ...prevState.userInfo,
+          [currentTargetName]: currentTargetValue
+          /* name:currentTarget.value,
+          job:currentTarget.value,
+          email:currentTarget.value,
+          phone:currentTarget.value,
+          linkedin:currentTarget.value,
+          github:currentTarget.value */
+          
+        }
+      }
     })
   }
 
@@ -39,7 +57,12 @@ class ProfilePageBody extends React.Component {
             <FormList handleCollapse={this.handleCollapse}
                       rotatearrow={this.state.rotatearrow}
                       activePanel={this.state.activePanel}
-                      value={this.state.name}
+                      valueName={this.state.userInfo.name}
+                      valueJob={this.state.userInfo.job}
+                      valueEmail={this.state.userInfo.email}
+                      valuePhone={this.state.userInfo.phone}
+                      valueLinkedin={this.state.userInfo.linkedin}
+                      valueGithub={this.state.userInfo.github}
                       handleInputValue={this.handleInputValue}
 
 
