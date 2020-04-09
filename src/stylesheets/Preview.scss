@@ -124,7 +124,7 @@ $nameFont: $previewText;
 //     }
 //   }
 // }
-.infoStyle1{
+.infoStyle1 {
     border-left: 5px solid $palete1Color2;
     color:$palete1Color1,
 }
@@ -147,19 +147,27 @@ $nameFont: $previewText;
 
 
 .buttonStyle1 {
-    border:  $borderColor;
+
     .icon{
-    color: $palete1Color1;
-  
+        color: $palete1Color1;
+    }
+    li {
+        border: 2px solid $palete1Color3;
 
     }
+   
+
+    
 }
 .buttonStyle2 {
-    border:$palete2Color3;
+  
     .icon{
         color: $palete2Color3;
-    
-        }
+    }
+    li {
+        border: 2px solid $palete2Color2;
+
+    }
 }
 .buttonStyle3 {
     border: $palete3Color3;
@@ -167,11 +175,17 @@ $nameFont: $previewText;
         color: $palete3Color3;
     
         }
+        li {
+            border: 2px solid $palete3Color2;
+        }
 }
 .buttonStyle4 {
-    border:  $palete4Color3;
+    
     .icon{
         color: $palete4Color3;
 
+        }
+        li{
+            border:2px solid $palete4Color2;
         }
 }
