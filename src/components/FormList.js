@@ -27,7 +27,11 @@ class FormList extends React.Component {
 
           >
         
-            <Design />
+            <Design 
+                  // checked = {this.state.userInfo.checked}
+                  // handlePaletteChange= {handlePaletteChange}
+                  
+            />
           </CollapsableItem>
         
           <CollapsableItem collapsableTitle='Rellena'
