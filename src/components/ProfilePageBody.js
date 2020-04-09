@@ -53,17 +53,19 @@ class ProfilePageBody extends React.Component {
     
     return (
         <div id="profilePageBody" className="profilePageBody">
-            <CardPreview/>
-            <FormList handleCollapse={this.handleCollapse}
-                      rotatearrow={this.state.rotatearrow}
-                      activePanel={this.state.activePanel}
-                      valueName={this.state.userInfo.name}
-                      valueJob={this.state.userInfo.job}
-                      valueEmail={this.state.userInfo.email}
-                      valuePhone={this.state.userInfo.phone}
-                      valueLinkedin={this.state.userInfo.linkedin}
-                      valueGithub={this.state.userInfo.github}
-                      handleInputValue={this.handleInputValue}
+            <CardPreview  valueName={this.state.userInfo.name}
+                          valueJob={this.state.userInfo.job}
+            />
+            <FormList     handleCollapse={this.handleCollapse}
+                          rotatearrow={this.state.rotatearrow}
+                          activePanel={this.state.activePanel}
+                          valueName={this.state.userInfo.name}
+                          valueJob={this.state.userInfo.job}
+                          valueEmail={this.state.userInfo.email}
+                          valuePhone={this.state.userInfo.phone}
+                          valueLinkedin={this.state.userInfo.linkedin}
+                          valueGithub={this.state.userInfo.github}
+                          handleInputValue={this.handleInputValue}
 
 
             />

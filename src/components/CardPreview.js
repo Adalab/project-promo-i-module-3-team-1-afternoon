@@ -14,7 +14,9 @@ class CardPreview extends React.Component {
         <div id="cardPreview__centeredBox" className="cardPreview__centeredBox" >
           <PreviewResetButton />
           <div id="card" className="card" >
-            <PreviewProfileInfo/>
+            <PreviewProfileInfo name={this.props.valueName}
+                                job={this.props.valueJob}
+            />
             <PreviewAvatarBox/>
             <PreviewSocialButtonList/>
           </div>
