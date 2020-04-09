@@ -116,16 +116,23 @@ $nameFont: $previewText;
 //CLASSES TO BE CALLED
 
 .infoStyle1 {
-  .preview__profileInfo {
+  .card__profileInfo--box {
     border-left: 5px solid $palete1Color2;
 
-    .nameText {
+    .card__profileInfo--name {
       color: $formText;
     }
   }
 }
 .red{
-    color:Red,
+    border-left: 5px solid $palete1Color2;
+    color:$palete1Color1,
+}
+
+.black {
+    border-left: 5px solid $palete2Color2;
+    color:$palete1Color2,
+
 }
 .infoStyle2 {
   .preview__profileInfo {
