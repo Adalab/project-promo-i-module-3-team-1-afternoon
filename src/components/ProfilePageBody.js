@@ -6,16 +6,32 @@ class ProfilePageBody extends React.Component {
   constructor(props) {
     super(props);
     this.handleCollapse = this.handleCollapse.bind(this)
-    this.handlePaletteChange = this.handlePaletteChange.bind(this)
+    this.handleInputValue = this.handleInputValue.bind(this);
     this.state = {
       activePanel: '',
       rotatearrow: '',
-
-      
-
+      userInfo: {
+        palette: '',
+        name: '',
+        job: '',
+        email: '',
+        phone: '',
+        linkedin: '',
+        github: ''
       }
     }
-  
+  }
+
+  handleInputValue(currentTargetName, currentTargetValue) {
+    this.setState(prevState => {
+      return {
+        userInfo: {
+          ...prevState.userInfo,
+          [currentTargetName]: currentTargetValue
+        }
+      }
+    })
+  }
 
   handleCollapse(targetId) {
     if (targetId !== this.state.activePanel) {
@@ -27,39 +43,25 @@ class ProfilePageBody extends React.Component {
     }
   }
 
-//   handlePaletteChange(checkedPaletteValue) {
-//     this.setState((prevState) => {
-//         let newPaletteValue = prevState.paletteValue;
-//         let newUserInfo = prevState.userInfo;
-
-//         if (checkedPaletteValue === '1') {
-//             newPaletteValue = '1'
-//         }
-//         if (checkedPaletteValue === '2') {
-//             newPaletteValue = '2'
-//         }
-//         if (checkedPaletteValue === '3') {
-//             newPaletteValue = '3'
-//         }
-//         return {
-//             userInfo: { ...newUserInfo, "palette": newPaletteValue}
-//         }
-//     })
-// }
-
   render() {
+
     return (
       <div id="profilePageBody" className="profilePageBody">
-        <CardPreview></CardPreview>
+        <CardPreview />
         <FormList handleCollapse={this.handleCollapse}
           rotatearrow={this.state.rotatearrow}
           activePanel={this.state.activePanel}
-          handlePaletteChange = {this.handlePaletteChange}>
-
-          </FormList>
+          valuepalette={this.state.userInfo.palette}
+          valueName={this.state.userInfo.name}
+          valueJob={this.state.userInfo.job}
+          valueEmail={this.state.userInfo.email}
+          valuePhone={this.state.userInfo.phone}
+          valueLinkedin={this.state.userInfo.linkedin}
+          valueGithub={this.state.userInfo.github}
+          handleInputValue={this.handleInputValue}
+        />
       </div>
     );
   }
 }
-
 export default ProfilePageBody;

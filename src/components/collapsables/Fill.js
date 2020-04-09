@@ -1,79 +1,105 @@
 import React from 'react';
+import FillInput from './FillInput';
+import '../../stylesheets/Collapsables.scss';
 import '../../stylesheets/Fill.scss'
-import Avatar from '../Avatar';
+import Avatar from './Avatar';
+
 
 class Fill extends React.Component{
     constructor(props){
         super(props);
-    }
-    render(){
-        return(
-            <section className="form__sections form__fill">
-            <div className="form__open" id="form__fill--open">
-                <div className="form__flex">
-                <label for="name">Nombre completo<span>*</span></label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    placeholder="Ej. Sally Jill" 
-                    maxlength="20" 
-                    required/>
-                
-                <label for="job">Profesión <span>*</span></label>
-                <input 
-                    type="text" 
-                    id="job" 
-                    name="job" 
-                    placeholder="Ej: Front-end unicorn" 
-                    maxlength="25" 
-                    required/>
-                
-                <label for="photo">Imagen de perfil <span>*</span></label>
-                <input
-                     type="file" 
-                     id="photo" 
-                     name="photo" 
-                     className="hidden hiddenJS js__photo--file" 
-                     required/>
+        
+    };
 
-                    <Avatar className="photo__upload"/>
+    render(){
+        
+        return(
+            <section  className="form__sections form__fill">
+                <div className="form__open" id="form__fill--open">
                 
-                
-                <label for="email">Email <span>*</span></label>
-                <input
-                     type="email"
-                      id="email" 
-                      name="email" 
-                      placeholder="Ej: sally-hill@gmail.com" 
-                      required/>
-                
-                <label for="phone">Teléfono</label>
-                <input 
-                    type="tel" 
-                    id="phone" 
-                    name="phone" 
-                    placeholder="Ej: 555-55-55-55"
-                    />
-                
-                <label for="linkedin">LinkedIn <span>*</span></label>
-                <input 
-                    type="text" 
-                    id="linkedin" 
-                    name="linkedin" 
-                    placeholder="Ej: linkedin.com/in/sally.hill" 
-                    required/>
-                
-                <label for="github">GitHub <span>*</span></label>
-                <input 
-                    type="text" 
-                    id="github" 
-                    name="github" 
-                    placeholder="Ej: @sally-hill" 
-                    required/>
-            </div>
-        </div>
-        </section>
+                <FillInput  htmlFor="name"
+                            labelName="Nombre completo *"
+                            inputType="text"
+                            inputId="name"
+                            inputName="name"
+                            placeHolder="Ej. Sally Jill" 
+                            maxLength={20}
+                            value={this.props.valueName}
+                            handleInputValue={this.props.handleInputValue}
+                            required
+                           
+                            
+
+                />
+                <FillInput
+                            htmlFor="job"
+                            labelName="Profesión *"
+                            inputType="text"
+                            inputId="job"
+                            inputName="job"
+                            placeHolder="Ej: Front-end unicorn" 
+                            maxLength={25}
+                            value={this.props.valueJob}
+                            handleInputValue={this.props.handleInputValue}
+                            required
+                />
+                 <FillInput
+                            htmlFor="photo"
+                            labelName="Imagen de perfil *"
+                            inputType="file"
+                            inputId="photo"
+                            inputName="photo"
+                            inputClassName= "hidden hiddenJS js__photo--file"
+                            required
+                />
+                <Avatar/>
+                 <FillInput
+                            htmlFor="email"
+                            labelName="Email *"
+                            inputType="email"
+                            inputId="email"
+                            inputName="photo"
+                            placeHolder= "Ej: sally-hill@gmail.com" 
+                            value={this.props.valueEmail}
+                            handleInputValue={this.props.handleInputValue}
+                            required
+                />
+                 <FillInput
+                            htmlFor="phone"
+                            labelName="Teléfono"
+                            inputType="tel"
+                            inputId="phone"
+                            inputName="phone"
+                            placeHolder= "Ej: 555-55-55-55"
+                            value={this.props.valuePhone}
+                            handleInputValue={this.props.handleInputValue}
+                            required
+                />
+                <FillInput
+                            htmlFor="linkedin"
+                            labelName="LinkedIn *"
+                            inputType="text"
+                            inputId="linkedin"
+                            inputName="linkedin"
+                            placeHolder= "Ej: linkedin.com/in/sally.hill" 
+                            value={this.props.valueLinkedin}
+                            handleInputValue={this.props.handleInputValue}
+                            required
+                />
+                 <FillInput
+                            htmlFor="github"
+                            labelName="Github *"
+                            inputType="text"
+                            inputId="github"
+                            inputName="github"
+                            placeHolder= "Ej: @sally-hill" 
+                            value={this.props.valueGithub}
+                            handleInputValue={this.props.handleInputValue}
+                            required
+                />
+               
+                </div>
+            </section>
         );
     }
 }

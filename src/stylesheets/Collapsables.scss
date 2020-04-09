@@ -1,5 +1,6 @@
 @import 'core/variables';
 
+
 .rotate {
 
     transform: rotate(180deg);
@@ -9,6 +10,7 @@
         color: $secondaryColor;
     }
 }
+
 
 .active {
     display: block;
