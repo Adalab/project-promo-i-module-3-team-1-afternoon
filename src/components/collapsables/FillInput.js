@@ -8,11 +8,12 @@ class FillInput extends React.Component{
     }
     changeInputValue(event){
         this.props.handleInputValue(event.currentTarget.name, event.currentTarget.value)
+        console.log(event.currentTarget)
         
             
     }
     render(){
-        console.log(this.props)
+        
         return(
             <div className="form__flex">
                 <label htmlFor={this.props.htmlFor}>{this.props.labelName}</label>
