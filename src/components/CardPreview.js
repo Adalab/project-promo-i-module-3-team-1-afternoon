@@ -20,7 +20,10 @@ class CardPreview extends React.Component {
               name={this.props.valueName}
               job={this.props.valueJob}
             />
-            <PreviewAvatarBox/>
+            <PreviewAvatarBox
+            handleImage = {this.props.handleImage}
+            
+            />
            
             <PreviewSocialButtonList  value={this.props.checked}
                                        email={this.props.valueEmail}
