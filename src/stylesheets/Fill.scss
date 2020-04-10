@@ -28,9 +28,17 @@
 
     input {
         border: 1px solid $borderColor;
-        margin: 5px 0 20px 0;
+        margin: 25px 0 20px 0;
         height: 30px;
         width: 100%;
+
+    }
+    .js__photo--file {
+
+        padding-top:20px;
+        z-index: 10;
+
+
     }
 
     .form__flex {
@@ -65,7 +73,7 @@
         border: 1px solid $borderColor;
         box-sizing: border-box;
         margin: 10px 0 0 20px;
-       // background:url(../default-avatar.gif) no-repeat; /* no creo carpeta por poder haber conflicto */
-        //background-size: cover;
+    //    background:url(../default-avatar.gif) no-repeat; /* no creo carpeta por poder haber conflicto */
+    //     background-size: cover;
     }
 }
