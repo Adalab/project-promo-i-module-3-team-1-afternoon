@@ -18,11 +18,22 @@ class ProfilePageBody extends React.Component {
         email: '',
         phone: '',
         linkedin: '',
-        github: ''
+        github: '',
+        img: ''
 
       }
     }
+    this.handleImage = this.handleImage.bind(this);
   }
+
+  handleImage(img) {
+    this.setState({
+      img: img
+    });
+  }
+
+
+
 
   handleInputValue(currentTargetName, currentTargetValue) {
     this.setState(prevState => {
@@ -56,8 +67,10 @@ class ProfilePageBody extends React.Component {
                           valueEmail={this.state.userInfo.email}
                           valuePhone={this.state.userInfo.phone}
                           valueLinkedin={this.state.userInfo.linkedin}
-                          valueGithub={this.state.userInfo.github}
+                          valueGithub={this.state.userInfo.github}                  
                           checked={this.state.userInfo.palette}
+                          inputFile={this.state.userInfo.img}
+                          handleImage={this.handleImage}
                           
                        />
           
@@ -72,6 +85,8 @@ class ProfilePageBody extends React.Component {
           valueLinkedin={this.state.userInfo.linkedin}
           valueGithub={this.state.userInfo.github}
           handleInputValue={this.handleInputValue}
+          inputFile={this.state.userInfo.img}
+          handleImage={this.handleImage}
         />
 
       </div>
