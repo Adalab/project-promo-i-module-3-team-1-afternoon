@@ -1,6 +1,7 @@
 import React from 'react';
 import FormList from './FormList';
 import CardPreview from './CardPreview';
+import AvatarImg from '../components/collapsables/Default_avatar.js'
 
 class ProfilePageBody extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class ProfilePageBody extends React.Component {
         phone: '',
         linkedin: '',
         github: '',
-        img: ''
+        img: AvatarImg
 
       }
     }

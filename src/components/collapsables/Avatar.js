@@ -1,4 +1,5 @@
 import React from 'react';
+import AvatarImg from './Default_avatar.js'
 
 const fr = new FileReader();
 
@@ -9,7 +10,7 @@ class Avatar extends React.Component {
     this.writeImage = this.writeImage.bind(this);
     this.fileInput = React.createRef();
     this.state = {
-      img: ''
+      img: AvatarImg
     };
   }
 
@@ -36,7 +37,7 @@ class Avatar extends React.Component {
        
         <div class="photo__upload">
         {/* <button class="photo__upload--btn js__photo--btn" id="submit">Añadir imagen </button> */}
-        <input type="file" ref={this.fileInput} id="photo" name="photo" className=" hiddenJS js__photo--file" required />
+        <input type="file" ref={this.fileInput} id="photo" name="photo" className="hiddenJS js__photo--file" required />
           <button class="photo__upload--btn js__photo--btn" id="submit">Añadir imagen </button>
           <img className="thumbnail js__photo--thumbnail" src={this.state.img} alt="Imagen" />
 
@@ -48,23 +49,3 @@ class Avatar extends React.Component {
 }
 
 export default Avatar;
-
-
-
-/*
-
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Upload file:
-          <input type="file" ref={this.fileInput} />
-        </label>
-        <img src={this.state.img} alt="Imagen" />
-        <button type="submit">Submit</button>
-      </form>
-    );
-  }
-}
-
-*/
