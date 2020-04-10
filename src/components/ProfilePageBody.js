@@ -27,12 +27,16 @@ class ProfilePageBody extends React.Component {
   }
 
   handleImage(img) {
-    this.setState({
-      img: img
-    });
-  }
-
-
+    
+      this.setState(prevState => {
+        return {
+          userInfo: {
+          ...prevState.userInfo,
+            img: img
+      }
+    }
+  });
+}
 
 
   handleInputValue(currentTargetName, currentTargetValue) {
@@ -58,7 +62,7 @@ class ProfilePageBody extends React.Component {
 
   render() {
 
-
+    console.log(this.state.userInfo.img)
     
     return (
         <div id="profilePageBody" className="profilePageBody">

@@ -9,6 +9,7 @@ class CardPreview extends React.Component {
     super(props);
   }
   render() {
+    
     return (
       <div id="cardPreview" className="cardPreview grid-2">
         <div id="cardPreview__centeredBox" className="cardPreview__centeredBox" >
@@ -22,6 +23,7 @@ class CardPreview extends React.Component {
             />
             <PreviewAvatarBox
             handleImage = {this.props.handleImage}
+            inputFile={this.props.inputFile}
             
             />
            

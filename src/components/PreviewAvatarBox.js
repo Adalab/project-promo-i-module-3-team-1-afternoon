@@ -1,25 +1,18 @@
 import React from 'react';
-// import Avatar from '../images/default-avatar.gif'
-import Avatar from '../components/collapsables/Avatar';
+import Avatar from '../images/default-avatar.gif'
+/* import Avatar from '../components/collapsables/Avatar'; */
+const fr = new FileReader();
 
 class PreviewAvatarBox extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props)
     this.state = {
       img: ''
     };
-    
-    this.handleImage = this.handleImage.bind(this);
-
-  }
-
-  handleImage(img) {
-    this.setState({
-      img: img
-    });
-  }
+ } 
   render() {
-    console.log(this.props.inputFile)
+    
     return (
      
       
