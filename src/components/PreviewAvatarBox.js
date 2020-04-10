@@ -1,16 +1,18 @@
 import React from 'react';
-import Avatar from '../images/default-avatar.gif'
 
 class PreviewAvatarBox extends React.Component {
   constructor(props) {
     super(props);
-  }
-  render() {
+    console.log(this.props)
+    };
+    render() {
+    
     return (
-      <div id="previewAvatarBox" className="card__avatar--box">
+      <div id="previewAvatarBox" className="card__avatar--box"> 
+      <img className="card__avatar--box" src={this.props.inputFile} alt="Imagen"/>
       </div>
+     
     );
   }
 }
-
 export default PreviewAvatarBox;

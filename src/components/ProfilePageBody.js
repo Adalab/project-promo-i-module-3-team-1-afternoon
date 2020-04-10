@@ -1,6 +1,7 @@
 import React from 'react';
 import FormList from './FormList';
 import CardPreview from './CardPreview';
+import AvatarImg from '../components/collapsables/Default_avatar.js'
 
 class ProfilePageBody extends React.Component {
   constructor(props) {
@@ -18,11 +19,26 @@ class ProfilePageBody extends React.Component {
         email: '',
         phone: '',
         linkedin: '',
-        github: ''
+        github: '',
+        img: AvatarImg
 
       }
     }
+    this.handleImage = this.handleImage.bind(this);
   }
+
+  handleImage(img) {
+    
+      this.setState(prevState => {
+        return {
+          userInfo: {
+          ...prevState.userInfo,
+            img: img
+      }
+    }
+  });
+}
+
 
   handleInputValue(currentTargetName, currentTargetValue) {
     this.setState(prevState => {
@@ -47,7 +63,7 @@ class ProfilePageBody extends React.Component {
 
   render() {
 
-
+    console.log(this.state.userInfo.img)
     
     return (
         <div id="profilePageBody" className="profilePageBody">
@@ -56,8 +72,10 @@ class ProfilePageBody extends React.Component {
                           valueEmail={this.state.userInfo.email}
                           valuePhone={this.state.userInfo.phone}
                           valueLinkedin={this.state.userInfo.linkedin}
-                          valueGithub={this.state.userInfo.github}
+                          valueGithub={this.state.userInfo.github}                  
                           checked={this.state.userInfo.palette}
+                          inputFile={this.state.userInfo.img}
+                          handleImage={this.handleImage}
                           
                        />
           
@@ -72,6 +90,8 @@ class ProfilePageBody extends React.Component {
           valueLinkedin={this.state.userInfo.linkedin}
           valueGithub={this.state.userInfo.github}
           handleInputValue={this.handleInputValue}
+          inputFile={this.state.userInfo.img}
+          handleImage={this.handleImage}
         />
 
       </div>

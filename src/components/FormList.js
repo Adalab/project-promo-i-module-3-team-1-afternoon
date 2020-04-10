@@ -52,6 +52,8 @@ class FormList extends React.Component {
                       valueLinkedin={this.props.valueLinkedin}
                       valueGithub={this.props.valueGithub}
                       handleInputValue={this.props.handleInputValue}
+                      inputFile={this.props.inputFile}
+                      handleImage={this.props.handleImage}
             />
           </CollapsableItem>
 

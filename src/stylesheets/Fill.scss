@@ -28,10 +28,12 @@
 
     input {
         border: 1px solid $borderColor;
-        margin: 5px 0 20px 0;
+        margin: 25px 0 20px 0;
         height: 30px;
         width: 100%;
+
     }
+    
 
     .form__flex {
         display: flex;
@@ -65,7 +67,17 @@
         border: 1px solid $borderColor;
         box-sizing: border-box;
         margin: 10px 0 0 20px;
-        background:url(../default-avatar.gif) no-repeat; /* no creo carpeta por poder haber conflicto */
-        background-size: cover;
+    //    background:url(../default-avatar.gif) no-repeat; /* no creo carpeta por poder haber conflicto */
+    //     background-size: cover;
     }
-}
+} 
+
+.js__photo--file {
+
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+    }
