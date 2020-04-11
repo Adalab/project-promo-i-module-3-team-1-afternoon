@@ -3,6 +3,8 @@ import FillInput from './FillInput';
 import '../../stylesheets/Collapsables.scss';
 import '../../stylesheets/Fill.scss'
 import Avatar from './Avatar';
+import PropTypes from 'prop-types';
+
 
 
 class Fill extends React.Component{
@@ -104,5 +106,13 @@ class Fill extends React.Component{
         );
     }
 }
+Fill.propTypes = {
+    valueName: PropTypes.string.isRequired,
+    valueJob: PropTypes.string.isRequired,
+    valueEmail: PropTypes.string.isRequired, /* @ */
+    valuePhone: PropTypes.number,
+    valueLinkedin: PropTypes.string.isRequired,
+    valueGithub: PropTypes.string.isRequired
+  }
 
 export default Fill;
