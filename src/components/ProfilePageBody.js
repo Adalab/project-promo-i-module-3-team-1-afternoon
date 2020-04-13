@@ -61,8 +61,8 @@ class ProfilePageBody extends React.Component {
       this.setState({ rotatearrow: '' })
     }
   }
-  handleReset(event){
-    event.preventDefault()
+  handleReset(){
+    
     this.state = {
       activePanel: '',
       rotatearrow: '',

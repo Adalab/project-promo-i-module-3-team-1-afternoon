@@ -3,14 +3,15 @@ import React from 'react';
 class PreviewResetButton extends React.Component {
     constructor(props) {
         super(props);
-        /* this.clickReset = this.clickReset.bind(this); */
+        this.clickReset = this.clickReset.bind(this);
     }
-  /*   clickReset(event){
+  clickReset(event){
+        event.preventDefault()
         this.props.handleReset()
-    } */
+    }
     render() {
         return (
-            <button onClick = {this.props.handleReset} /* he probado poniendo la función directamente, no da error pero no pasa nada */class="previewResetButton" href="#">
+            <button onClick = {this.clickReset} class="previewResetButton" href="#">
                 <i class="far fa-trash-alt"></i> reset
             </button>
         );
