@@ -37,9 +37,10 @@ class Avatar extends React.Component {
        
         <div class="photo__upload">
         {/* <button class="photo__upload--btn js__photo--btn" id="submit">Añadir imagen </button> */}
+        <button class="photo__upload--btn js__photo--btn" id="submit">Añadir imagen </button>
         <input type="file" ref={this.fileInput} id="photo" name="photo" className="hiddenJS js__photo--file" required />
-          <button class="photo__upload--btn js__photo--btn" id="submit">Añadir imagen </button>
-          <img className="thumbnail js__photo--thumbnail" src={this.state.img} alt="Imagen" />
+          
+        <img className="thumbnail js__photo--thumbnail" src={this.state.img} alt="Imagen" />
 
         </div>
       </form>
